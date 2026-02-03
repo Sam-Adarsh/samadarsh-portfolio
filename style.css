@@ -334,6 +334,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: var(--spacing-md);
+    justify-items: center;
 }
 
 .project-card {
@@ -344,6 +345,8 @@ section {
     transition: var(--transition-smooth);
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 600px;
 }
 
 .project-card:hover {
