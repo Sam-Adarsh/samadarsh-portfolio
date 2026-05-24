@@ -5,10 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
-        content="Haugtun is a market-facing initiative by Adarsh Subramani focused on structured onboarding, disciplined market participation, and practical trading support." />
-    <title>Haugtun | Market Guidance by Adarsh Subramani</title>
+        content="Haugtun is a market-facing initiative by Adarsh S focused on structured onboarding, disciplined market participation, and practical trading support." />
+    <title>Haugtun | Market Guidance by Adarsh S</title>
     <link rel="stylesheet" href="../haugtun.css?v=10" />
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script defer data-domain="haugtun.in"
+        src="https://plausible.io/js/script.outbound-links.tagged-events.js"></script>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
 </head>
 
 <body>
@@ -57,8 +59,8 @@
                         </div>
 
                         <div class="hero-actions">
-                            <a href="#plans" class="btn btn-primary">Open Account</a>
-                            <a href="#contact" class="btn btn-secondary">Contact Adarsh</a>
+                            <a href="#plans" class="btn btn-primary" data-plausible-event-name="Hero Open Account">Open Account</a>
+                            <a href="#contact" class="btn btn-secondary">Contact Adarsh S</a>
                         </div>
                     </div>
 
@@ -192,9 +194,11 @@
                             </ul>
                             <div class="plan-actions">
                                 <a href="https://angel-one.onelink.me/Wjgr/v60voyif" target="_blank"
-                                    rel="noopener noreferrer" class="btn btn-primary">Open in App</a>
+                                    rel="noopener noreferrer" class="btn btn-primary"
+                                    data-plausible-event-name="Open Account App - ITrade Premier Pro Plus">Open in App</a>
                                 <a href="https://a.aonelink.in/ANGOne/pKF11jL" target="_blank" rel="noopener noreferrer"
-                                    class="btn btn-secondary">Open on Web</a>
+                                    class="btn btn-secondary"
+                                    data-plausible-event-name="Open Account Web - ITrade Premier Pro Plus">Open on Web</a>
                             </div>
                         </article>
 
@@ -211,9 +215,11 @@
                             </ul>
                             <div class="plan-actions">
                                 <a href="https://angel-one.onelink.me/Wjgr/1188a6us" target="_blank"
-                                    rel="noopener noreferrer" class="btn btn-primary">Open in App</a>
+                                    rel="noopener noreferrer" class="btn btn-primary"
+                                    data-plausible-event-name="Open Account App - ITrade Premier Plus">Open in App</a>
                                 <a href="https://a.aonelink.in/ANGOne/s2xGIVW" target="_blank" rel="noopener noreferrer"
-                                    class="btn btn-secondary">Open on Web</a>
+                                    class="btn btn-secondary"
+                                    data-plausible-event-name="Open Account Web - ITrade Premier Plus">Open on Web</a>
                             </div>
                         </article>
                     </div>
@@ -394,7 +400,7 @@
 
         <footer class="site-footer">
             <div class="container">
-                <p>&copy; 2026 Adarsh S. All rights reserved.</p>
+                <p>&copy; <span id="year"></span> Adarsh S. All rights reserved.</p>
             </div>
         </footer>
     </div>
@@ -418,7 +424,7 @@
         </div>
     </div>
 
-    <script src="../haugtun.js?v=4"></script>
+    <script src="../haugtun.js?v=5"></script>
     <script>
         lucide.createIcons();
     </script>
