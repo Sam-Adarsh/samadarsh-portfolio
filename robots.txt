@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://samadarsh.github.io/samadarsh-portfolio/sitemap.xml
+Sitemap: https://www.haugtun.in/sitemap.xml

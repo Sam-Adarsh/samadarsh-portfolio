@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+
     const ENQUIRY_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwjCf9TE9b8BnpEs8wUmzHU6xzPevHB8fPIL2WwpkNVsSOdA7ycA7a3mo7sg7ad22ch/exec';
     const viewer = document.querySelector('.card-viewer');
     const lightbox = document.querySelector('.lightbox');
@@ -119,6 +124,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             enquiryForm.reset();
             setFeedback('Your enquiry has been submitted successfully. I will get back to you soon.', 'is-success');
+
+            if (typeof window.plausible === 'function') {
+                window.plausible('Enquiry Submitted');
+            }
         } catch (error) {
             setFeedback('Something went wrong while sending your enquiry. Please try again or contact me directly.', 'is-error');
         } finally {

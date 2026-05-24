@@ -7,16 +7,19 @@
     <meta name="description"
         content="Portfolio of Adarsh S - AI & Data Science graduate building applied AI, analytics, and finance-focused systems." />
     <title>Adarsh S | Applied AI & Analytics</title>
-    <link rel="stylesheet" href="style.css?v=7" />
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css?v=8" />
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
 </head>
 
 <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <div class="bg-mesh"></div>
-    <div class="bg-gradient-orb top-right"></div>
-    <div class="bg-gradient-orb bottom-left"></div>
+    <div class="cosmic-bg" aria-hidden="true">
+        <canvas id="starfield"></canvas>
+        <div class="nebula nebula-one"></div>
+        <div class="nebula nebula-two"></div>
+        <div class="cosmic-grid"></div>
+    </div>
 
     <header class="site-header">
         <div class="container header-container">
@@ -212,10 +215,10 @@
                         </div>
                     </a>
 
-                    <a href="https://github.com/samadarsh/voice-note-ai" target="_blank"
+                    <a href="https://github.com/samadarsh/VoiceNote-AI" target="_blank"
                         rel="noopener noreferrer" class="project-card reveal-on-scroll">
                         <p class="card-eyebrow">Applied Generative AI</p>
-                        <h3 class="project-title">Voice Note AI</h3>
+                        <h3 class="project-title">VoiceNote AI</h3>
                         <p class="project-desc">
                             Multilingual AI voice-note assistant using Whisper and Groq LLMs for transcription, intent extraction, summarization, and JSON note saving.
                         </p>
@@ -336,7 +339,7 @@
         </div>
     </footer>
 
-    <script src="main.js?v=4"></script>
+    <script src="main.js?v=5"></script>
     <script>
         lucide.createIcons();
     </script>
