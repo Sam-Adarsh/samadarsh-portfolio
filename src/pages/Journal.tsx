@@ -10,9 +10,9 @@ export function JournalPage() {
         <div className="container mx-auto max-w-6xl px-6">
           <SectionHeader
             kicker="Writing"
-            title="Notes from"
+            title="Thoughts from"
             italic="the markets."
-            subtitle="Structured commentary on Indian equities, investing fundamentals, and how capital actually behaves."
+            subtitle="Writing about markets, investor behavior, and how capital moves through cycles."
           />
 
           {/* Haugtun intro card */}
