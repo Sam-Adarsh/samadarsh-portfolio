@@ -5,9 +5,9 @@ export default defineConfig({
   base: '/samadarsh-portfolio/',
   build: {
     outDir: 'dist',
+    emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
         haugtun: resolve(__dirname, 'haugtun/index.html'),
       },
     },

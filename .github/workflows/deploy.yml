@@ -26,33 +26,27 @@ jobs:
           cache: npm
           cache-dependency-path: |
             package-lock.json
-            demo/package-lock.json
+            portfolio/package-lock.json
 
-      # Build the old portfolio (root project)
+      # Build Haugtun (root project)
       - name: Install root dependencies
         run: npm ci
 
-      - name: Build old portfolio
+      - name: Build Haugtun
         run: npm run build
 
-      # Tuck the old portfolio under /legacy so the new one can take the root
-      - name: Move old portfolio to /legacy
-        run: |
-          mkdir -p dist/legacy
-          mv dist/index.html dist/legacy/
-
-      # Build the new portfolio (demo project)
-      - name: Install new portfolio dependencies
+      # Build the portfolio
+      - name: Install portfolio dependencies
         run: npm ci
-        working-directory: ./demo
+        working-directory: ./portfolio
 
-      - name: Build new portfolio
+      - name: Build portfolio
         run: npm run build
-        working-directory: ./demo
+        working-directory: ./portfolio
 
-      # Merge new portfolio's build into dist as the new root
-      - name: Merge new portfolio into dist root
-        run: cp -R demo/dist/. dist/
+      # Merge portfolio build into dist as the root site
+      - name: Merge portfolio into dist root
+        run: cp -R portfolio/dist/. dist/
 
       - uses: actions/upload-pages-artifact@v3
         with:

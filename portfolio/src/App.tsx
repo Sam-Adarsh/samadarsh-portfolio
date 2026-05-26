@@ -7,7 +7,7 @@ import { WorkPage } from './pages/Work';
 import { AboutPage } from './pages/About';
 import { JournalPage } from './pages/Journal';
 
-const LOADER_KEY = 'demo-portfolio-loaded';
+const LOADER_KEY = 'portfolio-loaded';
 
 function AppRoutes() {
   return (
