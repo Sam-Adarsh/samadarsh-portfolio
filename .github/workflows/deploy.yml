@@ -28,27 +28,31 @@ jobs:
             package-lock.json
             demo/package-lock.json
 
-      # Build the original portfolio (root)
+      # Build the old portfolio (root project)
       - name: Install root dependencies
         run: npm ci
 
-      - name: Build root site
+      - name: Build old portfolio
         run: npm run build
 
-      # Build the new portfolio (v2)
-      - name: Install v2 dependencies
+      # Tuck the old portfolio under /legacy so the new one can take the root
+      - name: Move old portfolio to /legacy
+        run: |
+          mkdir -p dist/legacy
+          mv dist/index.html dist/legacy/
+
+      # Build the new portfolio (demo project)
+      - name: Install new portfolio dependencies
         run: npm ci
         working-directory: ./demo
 
-      - name: Build v2 site
+      - name: Build new portfolio
         run: npm run build
         working-directory: ./demo
 
-      # Merge v2 build into the root dist under /v2
-      - name: Combine builds
-        run: |
-          mkdir -p dist/v2
-          cp -R demo/dist/. dist/v2/
+      # Merge new portfolio's build into dist as the new root
+      - name: Merge new portfolio into dist root
+        run: cp -R demo/dist/. dist/
 
       - uses: actions/upload-pages-artifact@v3
         with:
