@@ -1,3 +1,5 @@
+import { renderProjects } from './js/render-projects.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     const yearSpan = document.getElementById('year');
     document.body.classList.add('js-ready');
@@ -26,9 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
         let shootingStars = [];
         let animationId = 0;
         let lastShootingStar = 0;
+        let paused = false;
 
         const createStars = () => {
-            const count = Math.min(320, Math.floor((width * height) / 6500));
+            const count = Math.min(
+                window.innerWidth < 768 ? 120 : 320,
+                Math.floor((width * height) / 6500)
+            );
             stars = Array.from({ length: count }, () => ({
                 x: Math.random() * width,
                 y: Math.random() * height,
@@ -48,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const spawnShootingStar = (time) => {
             if (time - lastShootingStar < 4200 || Math.random() > 0.015) return;
-
             lastShootingStar = time;
             shootingStars.push({
                 x: Math.random() * width * 0.8,
@@ -71,6 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         const draw = (time) => {
+            if (paused) {
+                animationId = requestAnimationFrame(draw);
+                return;
+            }
+
             ctx.clearRect(0, 0, width, height);
 
             stars.forEach((star) => {
@@ -111,15 +121,14 @@ document.addEventListener('DOMContentLoaded', () => {
         resize();
         window.addEventListener('resize', resize);
 
-        if (reducedMotion) {
-            const onResize = () => {
-                resize();
-                drawStatic();
-            };
+        document.addEventListener('visibilitychange', () => {
+            paused = document.hidden;
+        });
 
-            window.addEventListener('resize', onResize);
+        if (reducedMotion) {
             drawStatic();
-            return () => window.removeEventListener('resize', onResize);
+            window.addEventListener('resize', () => { resize(); drawStatic(); });
+            return () => {};
         }
 
         animationId = requestAnimationFrame(draw);
@@ -153,9 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape') {
-                closeMenu();
-            }
+            if (event.key === 'Escape') closeMenu();
         });
 
         document.addEventListener('click', (event) => {
@@ -178,14 +185,18 @@ document.addEventListener('DOMContentLoaded', () => {
         threshold: 0,
     });
 
-    sections.forEach((section) => {
-        scrollSpyObserver.observe(section);
-    });
+    sections.forEach((section) => scrollSpyObserver.observe(section));
+
+    // Render project cards from JSON before setting up reveal observer
+    renderProjects();
+
+    // Refresh lucide icons to cover dynamically rendered data-lucide attributes
+    if (window.lucide) {
+        window.lucide.createIcons();
+    }
 
     if (reducedMotion) {
-        document.querySelectorAll('.reveal-on-scroll').forEach((element) => {
-            element.classList.add('is-visible');
-        });
+        document.querySelectorAll('.reveal-on-scroll').forEach((el) => el.classList.add('is-visible'));
         return;
     }
 
@@ -196,17 +207,13 @@ document.addEventListener('DOMContentLoaded', () => {
             revealObserver.unobserve(entry.target);
         });
     }, {
-        threshold: 0.15,
+        threshold: 0.1,
         rootMargin: '0px 0px -40px 0px',
     });
 
-    document.querySelectorAll('.reveal-on-scroll').forEach((element) => {
-        revealObserver.observe(element);
-    });
+    document.querySelectorAll('.reveal-on-scroll').forEach((el) => revealObserver.observe(el));
 
     window.addEventListener('beforeunload', () => {
-        if (typeof cleanupStarfield === 'function') {
-            cleanupStarfield();
-        }
+        if (typeof cleanupStarfield === 'function') cleanupStarfield();
     });
 });

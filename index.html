@@ -7,7 +7,9 @@
     <meta name="description"
         content="Portfolio of Adarsh S - AI & Data Science graduate building applied AI, analytics, and finance-focused systems." />
     <title>Adarsh S | Applied AI & Analytics</title>
-    <link rel="stylesheet" href="style.css?v=8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/src/style.css" />
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
 </head>
 
@@ -31,7 +33,7 @@
                         <li><a href="#about" class="nav-link"><i data-lucide="user" width="18" height="18"></i> About</a></li>
                         <li><a href="#experience" class="nav-link"><i data-lucide="briefcase" width="18" height="18"></i> Experience</a></li>
                         <li><a href="#education" class="nav-link"><i data-lucide="graduation-cap" width="18" height="18"></i> Education</a></li>
-                        <li><a href="#projects" class="nav-link"><i data-lucide="sparkles" width="18" height="18"></i> Projects</a></li>
+                        <li><a href="#projects" class="nav-link"><i data-lucide="sparkles" width="18" height="18"></i> Work</a></li>
                         <li><a href="#skills" class="nav-link"><i data-lucide="cpu" width="18" height="18"></i> Skills</a></li>
                         <li><a href="#contact" class="nav-link"><i data-lucide="mail" width="18" height="18"></i> Contact</a></li>
                     </ul>
@@ -147,11 +149,22 @@
                     <article class="project-card reveal-on-scroll">
                         <p class="card-eyebrow">Authorised Person</p>
                         <h3 class="project-title">Angel One</h3>
-                        <p class="experience-role">Jan 2025 - Present</p>
+                        <p class="experience-role">Jan 2025 - Present (Proprietorship)</p>
                         <ul class="experience-list">
                             <li>Onboard and manage trading clients while supporting equity and derivatives participation.</li>
                             <li>Analyze market trends, research companies, and identify data-driven trading opportunities.</li>
                             <li>Implement structured trading setups and maintain disciplined portfolio tracking systems.</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-card reveal-on-scroll">
+                        <p class="card-eyebrow">AI/ML Intern</p>
+                        <h3 class="project-title">BAE AI</h3>
+                        <p class="experience-role">May 2026 - Present</p>
+                        <ul class="experience-list">
+                            <li>Built the BAExt Intent Engine — a deterministic pipeline converting shopping queries into structured intent, ranked product blocks, and validated JSON across a 1,200-SKU catalog.</li>
+                            <li>Implemented full MERN stack (Node/Express, React, MongoDB, TypeScript) covering query parsing, 11-signal ranking, answer generation, and end-to-end orchestration.</li>
+                            <li>Delivered production hardening with query caching, Docker Compose, 250+ automated tests, and 300-query stress testing with output grounding and performance benchmarks.</li>
                         </ul>
                     </article>
                 </div>
@@ -188,80 +201,18 @@
             </div>
         </section>
 
-        <section id="projects" class="projects-section">
+        <section id="projects" class="work-section">
             <div class="container">
-                <p class="section-kicker reveal-on-scroll">Projects</p>
-                <h2 class="section-title reveal-on-scroll">Selected work in AI, analytics, and intelligent systems</h2>
+                <p class="section-kicker reveal-on-scroll">Selected Work</p>
+                <h2 class="section-title reveal-on-scroll">AI systems, products, and market tools — shipped</h2>
                 <p class="section-subtitle reveal-on-scroll">
-                    Projects focused on automation, generative AI, and practical problem-solving across real-world
-                    scenarios
+                    From AI developer tools and D2C storefronts to trading systems and market intelligence
                 </p>
 
-                <div class="projects-grid">
-                    <a href="https://github.com/samadarsh/RepoMind" target="_blank" rel="noopener noreferrer"
-                        class="project-card reveal-on-scroll">
-                        <p class="card-eyebrow">Featured Project</p>
-                        <h3 class="project-title">RepoMind</h3>
-                        <p class="project-desc">
-                            Context-aware repository analysis tool that classifies project types and generates
-                            structured architectural insights using a multi-stage LLM workflow with bias-control
-                            mechanisms.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">Streamlit</span>
-                            <span class="project-tag">LangChain</span>
-                            <span class="project-tag">Groq</span>
-                            <span class="project-tag">Python</span>
-                        </div>
-                    </a>
+                <div id="featured-work" class="featured-grid"></div>
 
-                    <a href="https://github.com/samadarsh/VoiceNote-AI" target="_blank"
-                        rel="noopener noreferrer" class="project-card reveal-on-scroll">
-                        <p class="card-eyebrow">Applied Generative AI</p>
-                        <h3 class="project-title">VoiceNote AI</h3>
-                        <p class="project-desc">
-                            Multilingual AI voice-note assistant using Whisper and Groq LLMs for transcription, intent extraction, summarization, and JSON note saving.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">Streamlit</span>
-                            <span class="project-tag">Whisper</span>
-                            <span class="project-tag">Groq</span>
-                            <span class="project-tag">Python</span>
-                        </div>
-                    </a>
-
-                    <a href="https://github.com/samadarsh/GenAI-Email-Generator" target="_blank"
-                        rel="noopener noreferrer" class="project-card reveal-on-scroll">
-                        <p class="card-eyebrow">Applied Generative AI</p>
-                        <h3 class="project-title">GenAI Email Generator</h3>
-                        <p class="project-desc">
-                            Tool that generates context-aware email drafts from user prompts, combining structured
-                            prompt engineering with workflow automation.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">Streamlit</span>
-                            <span class="project-tag">LangChain</span>
-                            <span class="project-tag">Llama 3</span>
-                            <span class="project-tag">Python</span>
-                        </div>
-                    </a>
-
-                    <a href="https://github.com/samadarsh/IPO-Performance-Analysis" target="_blank"
-                        rel="noopener noreferrer" class="project-card reveal-on-scroll">
-                        <p class="card-eyebrow">Market Analysis</p>
-                        <h3 class="project-title">IPO Performance Analysis</h3>
-                        <p class="project-desc">
-                            Data analysis project on Indian IPO performance using profitability measures and visual
-                            exploration to identify post-listing patterns.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">Pandas</span>
-                            <span class="project-tag">Matplotlib</span>
-                            <span class="project-tag">Finance Data</span>
-                            <span class="project-tag">Python</span>
-                        </div>
-                    </a>
-                </div>
+                <p class="work-more-title reveal-on-scroll">More projects</p>
+                <div id="more-projects" class="bento-grid"></div>
             </div>
         </section>
 
@@ -339,10 +290,7 @@
         </div>
     </footer>
 
-    <script src="main.js?v=5"></script>
-    <script>
-        lucide.createIcons();
-    </script>
+    <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>

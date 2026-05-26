@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 0 0% 6%;
+  --surface: 0 0% 9%;
+  --text: 40 8% 96%;
+  --muted: 0 0% 58%;
+  --stroke: 0 0% 16%;
+  --accent: 38 22% 78%;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+html {
+  font-feature-settings: 'ss01', 'cv11', 'liga', 'kern';
+}
+
+body {
+  margin: 0;
+  font-family: Geist, system-ui, sans-serif;
+  background: hsl(var(--bg));
+  color: hsl(var(--text));
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: hsl(var(--accent) / 0.25);
+  color: hsl(var(--text));
+}
+
+.font-display {
+  font-feature-settings: 'ss01', 'kern', 'liga';
+  font-optical-sizing: auto;
+}
+
+.accent-gradient {
+  background: hsl(var(--text));
+}
+
+.name-reveal {
+  display: inline-block;
+}
+
+.blur-in {
+  filter: blur(12px);
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-scroll-down {
+    animation: none !important;
+  }
+}

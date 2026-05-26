@@ -283,7 +283,6 @@ main section {
 .hero-copy,
 .hero-panel,
 .info-card,
-.project-card,
 .contact-content {
     border: 1px solid var(--color-border);
     background:
@@ -545,6 +544,7 @@ main section {
     color: var(--color-primary);
 }
 
+/* Experience / Education shared grid (2 columns) */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -555,15 +555,22 @@ main section {
     margin-top: 2rem;
 }
 
-.experience-section .project-card:last-child {
+.experience-section .project-card:last-child:nth-child(odd) {
     grid-column: 1 / -1;
     justify-self: center;
     width: min(100%, 32rem);
 }
 
+/* Generic card shell — used by experience / education */
 .project-card {
     padding: 1.5rem;
     border-radius: 22px;
+    border: 1px solid var(--color-border);
+    background:
+        linear-gradient(160deg, rgba(34, 211, 238, 0.06), transparent 42%, rgba(168, 85, 247, 0.05)),
+        var(--color-surface);
+    backdrop-filter: blur(16px);
+    box-shadow: var(--shadow-card);
     transition: transform var(--transition-smooth), border-color var(--transition-smooth), background var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
@@ -671,6 +678,8 @@ a.project-card:hover,
     text-align: center;
 }
 
+/* ─── Reveal animation ─────────────────────────────────────────── */
+
 .reveal-on-scroll {
     opacity: 1;
     transform: translateY(0);
@@ -687,14 +696,195 @@ body.js-ready .reveal-on-scroll.is-visible {
     transform: translateY(0);
 }
 
+/* ─── Work section — featured grid ────────────────────────────── */
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.work-card {
+    border: 1px solid var(--color-border);
+    background:
+        linear-gradient(160deg, rgba(34, 211, 238, 0.06), transparent 42%, rgba(168, 85, 247, 0.05)),
+        var(--color-surface);
+    backdrop-filter: blur(16px);
+    box-shadow: var(--shadow-card);
+    border-radius: 22px;
+    overflow: hidden;
+    transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.work-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(34, 211, 238, 0.32);
+    box-shadow: var(--shadow-glow);
+}
+
+/* Featured card: media on top, body below */
+.work-card--featured {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-media {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-bottom: 1px solid var(--color-border);
+    overflow: hidden;
+    position: relative;
+    background: rgba(5, 5, 20, 0.6);
+}
+
+.work-media-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(34, 211, 238, 0.07), rgba(168, 85, 247, 0.07));
+    color: var(--color-text-dim);
+    font-family: var(--font-display);
+    font-size: 0.88rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.work-media-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.work-card--featured:hover .work-media-img {
+    transform: scale(1.03);
+}
+
+.work-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.work-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: grid;
+    gap: 0.55rem;
+    color: var(--color-text-muted);
+}
+
+.work-bullets li {
+    font-size: 0.95rem;
+    padding-left: 1.1rem;
+    position: relative;
+}
+
+.work-bullets li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    opacity: 0.7;
+}
+
+.work-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: auto;
+    padding-top: 1.4rem;
+}
+
+.work-btn {
+    min-height: 40px;
+    padding: 0.55rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* ─── More projects — bento grid ──────────────────────────────── */
+
+.work-more-title {
+    margin: 3.5rem 0 1.2rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.work-card--compact {
+    padding: 1.25rem;
+    display: block;
+    text-decoration: none;
+}
+
+.compact-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.compact-header .card-eyebrow {
+    margin: 0;
+}
+
+.compact-arrow {
+    color: var(--color-text-dim);
+    flex-shrink: 0;
+    transition: transform var(--transition-smooth), color var(--transition-smooth);
+}
+
+.work-card--compact:hover .compact-arrow {
+    transform: translate(3px, -3px);
+    color: var(--color-primary);
+}
+
+.work-card--compact .project-title {
+    font-size: 1.05rem;
+    margin: 0.4rem 0 0.3rem;
+}
+
+.work-card--compact .project-desc {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.work-card--compact .project-tags {
+    margin-top: 1rem;
+}
+
+/* ─── Responsive ───────────────────────────────────────────────── */
+
 @media (max-width: 960px) {
     .hero-container,
     .about-grid,
-    .projects-grid {
+    .projects-grid,
+    .featured-grid {
         grid-template-columns: 1fr;
     }
 
-    .experience-section .project-card:last-child {
+    .experience-section .project-card:last-child:nth-child(odd) {
         grid-column: auto;
         width: 100%;
     }
@@ -702,6 +892,10 @@ body.js-ready .reveal-on-scroll.is-visible {
     .hero-title,
     .section-title {
         max-width: none;
+    }
+
+    .bento-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -802,6 +996,18 @@ body.js-ready .reveal-on-scroll.is-visible {
     .btn {
         width: 100%;
     }
+
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-links {
+        flex-direction: column;
+    }
+
+    .work-links .btn {
+        width: 100%;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -815,6 +1021,7 @@ body.js-ready .reveal-on-scroll.is-visible {
 
     .reveal-on-scroll,
     .btn,
+    .work-card,
     .project-card,
     .nav-link,
     .bar {

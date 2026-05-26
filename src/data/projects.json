@@ -1,0 +1,100 @@
+[
+  {
+    "slug": "oor-snacks",
+    "title": "Oor Snacks",
+    "eyebrow": "Product · D2C",
+    "featured": true,
+    "order": 1,
+    "summary": "D2C storefront for a Chennai heritage snack brand — brand identity, product pages, cart, checkout, and live orders from day one.",
+    "bullets": [
+      "Built brand-forward storefront with cinematic scroll experience using GSAP + Lenis",
+      "Supabase-backed order management with Row-Level Security and a live admin dashboard",
+      "End-to-end ownership: brand, design, full-stack dev, and production deployment"
+    ],
+    "tags": ["Vite", "Supabase", "GSAP", "Lenis", "Vanilla JS"],
+    "links": {
+      "live": "https://oor-snacks.vercel.app",
+      "github": null
+    },
+    "media": {
+      "poster": null,
+      "video": null
+    }
+  },
+  {
+    "slug": "repomind",
+    "title": "RepoMind",
+    "eyebrow": "AI · Developer Tools",
+    "featured": true,
+    "order": 2,
+    "summary": "Context-aware repository analysis tool that classifies project types and generates structured architectural insights using a multi-stage LLM pipeline.",
+    "bullets": [
+      "Multi-stage LLM pipeline with bias-control via LangChain + Groq for consistent outputs",
+      "Classifies repository type and generates architectural summaries with dependency awareness",
+      "Streamlit UI with file-level analysis, structured JSON export, and configurable prompts"
+    ],
+    "tags": ["Streamlit", "LangChain", "Groq", "Python"],
+    "links": {
+      "live": "https://repomind14.streamlit.app/",
+      "github": "https://github.com/samadarsh/RepoMind"
+    },
+    "media": {
+      "poster": null,
+      "video": null
+    }
+  },
+  {
+    "slug": "voicenote-ai",
+    "title": "VoiceNote AI",
+    "eyebrow": "Applied GenAI",
+    "featured": false,
+    "order": 4,
+    "summary": "Multilingual AI voice-note assistant using Whisper and Groq LLMs for transcription, intent extraction, and JSON note saving.",
+    "bullets": [],
+    "tags": ["Streamlit", "Whisper", "Groq", "Python"],
+    "links": {
+      "live": null,
+      "github": "https://github.com/samadarsh/VoiceNote-AI"
+    },
+    "media": {
+      "poster": null,
+      "video": null
+    }
+  },
+  {
+    "slug": "genai-email",
+    "title": "GenAI Email Generator",
+    "eyebrow": "Applied GenAI",
+    "featured": false,
+    "order": 5,
+    "summary": "Generates context-aware email drafts from user prompts using structured prompt engineering and LangChain workflow automation.",
+    "bullets": [],
+    "tags": ["Streamlit", "LangChain", "Llama 3", "Python"],
+    "links": {
+      "live": null,
+      "github": "https://github.com/samadarsh/GenAI-Email-Generator"
+    },
+    "media": {
+      "poster": null,
+      "video": null
+    }
+  },
+  {
+    "slug": "ipo-analysis",
+    "title": "IPO Performance Analysis",
+    "eyebrow": "Market Analysis",
+    "featured": false,
+    "order": 6,
+    "summary": "Data analysis of Indian IPO performance using profitability measures and visual exploration to identify post-listing patterns.",
+    "bullets": [],
+    "tags": ["Pandas", "Matplotlib", "Finance Data", "Python"],
+    "links": {
+      "live": null,
+      "github": "https://github.com/samadarsh/IPO-Performance-Analysis"
+    },
+    "media": {
+      "poster": null,
+      "video": null
+    }
+  }
+]

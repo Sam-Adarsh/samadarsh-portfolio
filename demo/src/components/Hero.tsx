@@ -1,0 +1,98 @@
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { Link } from 'react-router-dom';
+import { heroContent } from '../data/content';
+
+const EMAIL = 'samadarsh14@gmail.com';
+
+export function Hero() {
+  const rootRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reducedMotion || !rootRef.current) return;
+
+    const ctx = gsap.context(() => {
+      gsap.from('.name-reveal > span', {
+        yPercent: 110,
+        duration: 1.15,
+        ease: 'power4.out',
+        stagger: 0.06,
+      });
+      gsap.to('.blur-in', {
+        filter: 'blur(0px)',
+        opacity: 1,
+        duration: 1,
+        delay: 0.35,
+        stagger: 0.08,
+        ease: 'power2.out',
+      });
+    }, rootRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <section
+      ref={rootRef}
+      className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden pb-20 pt-32 md:pb-28"
+    >
+      <div className="absolute inset-x-0 top-0 -z-10 h-[70vh] bg-gradient-to-b from-accent/[0.06] via-transparent to-transparent" />
+
+      <div className="container relative z-10 mx-auto max-w-6xl px-6">
+        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div className="flex-1">
+            <p className="blur-in mb-6 inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.02] px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.22em] text-muted backdrop-blur">
+              {heroContent.available ? (
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/70" />
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                </span>
+              ) : null}
+              {heroContent.eyebrow}
+            </p>
+
+            <h1 className="font-display text-6xl leading-[0.95] tracking-tightest text-text-primary md:text-8xl lg:text-[9.5rem]">
+              <span className="name-reveal block overflow-hidden">
+                <span className="block">Adarsh</span>
+              </span>
+              <span className="name-reveal block overflow-hidden">
+                <span className="block italic text-text-primary/90">S.</span>
+              </span>
+            </h1>
+          </div>
+
+          <div className="blur-in max-w-md md:text-right">
+            <p className="text-base leading-relaxed text-muted md:text-lg">
+              {heroContent.tagline}
+            </p>
+            <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.2em] text-muted/80">
+              {heroContent.location}
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3 md:justify-end">
+              <Link
+                to="/work"
+                className="group inline-flex items-center gap-2 rounded-full border border-white/[0.1] bg-white/[0.02] px-5 py-2.5 text-sm font-medium text-text-primary backdrop-blur transition hover:border-accent/40 hover:bg-white/[0.04]"
+              >
+                <span>See selected work</span>
+                <span className="transition-transform group-hover:translate-x-0.5">→</span>
+              </Link>
+              <a
+                href={`mailto:${EMAIL}`}
+                className="group inline-flex items-center gap-2 rounded-full bg-text-primary px-5 py-2.5 text-sm font-medium text-bg transition hover:bg-text-primary/90"
+              >
+                Get in touch
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-muted">
+        <span className="font-mono text-[10px] uppercase tracking-[0.25em]">Scroll</span>
+        <span className="h-10 w-px animate-scroll-down bg-gradient-to-b from-transparent via-accent/70 to-transparent" />
+      </div>
+    </section>
+  );
+}
