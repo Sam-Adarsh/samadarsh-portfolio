@@ -38,8 +38,8 @@ export function Hero() {
       <div className="absolute inset-x-0 top-0 -z-10 h-[70vh] bg-gradient-to-b from-accent/[0.06] via-transparent to-transparent" />
 
       <div className="container relative z-10 mx-auto max-w-6xl px-6">
-        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <div className="flex-1">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="flex-1 min-w-0">
             <p className="blur-in mb-6 inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.02] px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.22em] text-muted backdrop-blur">
               {heroContent.available ? (
                 <span className="relative flex h-1.5 w-1.5">
@@ -50,7 +50,7 @@ export function Hero() {
               {heroContent.eyebrow}
             </p>
 
-            <h1 className="font-display text-6xl leading-[0.95] tracking-tightest text-text-primary md:text-8xl lg:text-[9.5rem]">
+            <h1 className="font-display text-6xl leading-[0.95] tracking-tightest text-text-primary sm:text-7xl md:text-8xl lg:text-[9.5rem]">
               <span className="name-reveal block overflow-hidden">
                 <span className="block">Adarsh</span>
               </span>
@@ -60,7 +60,7 @@ export function Hero() {
             </h1>
           </div>
 
-          <div className="blur-in max-w-md md:text-right">
+          <div className="blur-in max-w-md lg:text-right">
             <p className="text-base leading-relaxed text-muted md:text-lg">
               {heroContent.tagline}
             </p>
@@ -68,7 +68,7 @@ export function Hero() {
               {heroContent.location}
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3 md:justify-end">
+            <div className="mt-8 flex flex-wrap gap-3 lg:justify-end">
               <Link
                 to="/work"
                 className="group inline-flex items-center gap-2 rounded-full border border-white/[0.1] bg-white/[0.02] px-5 py-2.5 text-sm font-medium text-text-primary backdrop-blur transition hover:border-accent/40 hover:bg-white/[0.04]"
@@ -87,7 +87,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 text-muted md:flex">
+      <div className="absolute bottom-8 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 text-muted lg:flex">
         <span className="font-mono text-[10px] uppercase tracking-[0.25em]">Scroll</span>
         <span className="h-10 w-px animate-scroll-down bg-gradient-to-b from-transparent via-accent/70 to-transparent" />
       </div>

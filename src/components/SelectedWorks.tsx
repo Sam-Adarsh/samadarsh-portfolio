@@ -52,9 +52,9 @@ export function SelectedWorks({ showHeader = true, limit }: SelectedWorksProps) 
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-100px' }}
                 transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
-                className="grid grid-cols-1 items-center gap-10 md:grid-cols-12 md:gap-14"
+                className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-14"
               >
-                <div className={`md:col-span-7 ${reverse ? 'md:order-2' : ''}`}>
+                <div className={`lg:col-span-7 ${reverse ? 'lg:order-2' : ''}`}>
                   <ProjectPreview
                     src={project.cover}
                     title={project.title}
@@ -65,7 +65,7 @@ export function SelectedWorks({ showHeader = true, limit }: SelectedWorksProps) 
                   />
                 </div>
 
-                <div className={`md:col-span-5 ${reverse ? 'md:order-1' : ''}`}>
+                <div className={`lg:col-span-5 ${reverse ? 'lg:order-1' : ''}`}>
                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[11px] uppercase tracking-[0.22em] text-accent">
                     <span>{project.eyebrow}</span>
                     <span className="text-muted">·</span>
