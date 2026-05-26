@@ -22,7 +22,6 @@ Lives at: [samadarsh.github.io/samadarsh-portfolio/](https://samadarsh.github.io
 ## Local development
 
 ```bash
-cd portfolio
 npm install
 npm run dev      # http://localhost:5173
 npm run build
@@ -49,7 +48,11 @@ cover: 'projects/<slug>.webp',
 
 ## Deploy
 
-Pushes to `main` trigger `.github/workflows/deploy.yml` in the repo root, which builds this project and Haugtun, then publishes to GitHub Pages.
+Pushes to `main` trigger `.github/workflows/deploy.yml`, which builds the site and publishes to GitHub Pages.
+
+## Related projects
+
+- **Haugtun** (market research practice) — separate repo: [github.com/samadarsh/haugtun](https://github.com/samadarsh/haugtun) → [haugtun.in](https://haugtun.in/)
 
 ## Loader
 

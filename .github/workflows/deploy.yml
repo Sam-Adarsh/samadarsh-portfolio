@@ -24,29 +24,18 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: |
-            package-lock.json
-            portfolio/package-lock.json
 
-      # Build Haugtun (root project)
-      - name: Install root dependencies
+      - name: Install dependencies
         run: npm ci
 
-      - name: Build Haugtun
+      - name: Build
         run: npm run build
 
-      # Build the portfolio
-      - name: Install portfolio dependencies
-        run: npm ci
-        working-directory: ./portfolio
-
-      - name: Build portfolio
-        run: npm run build
-        working-directory: ./portfolio
-
-      # Merge portfolio build into dist as the root site
-      - name: Merge portfolio into dist root
-        run: cp -R portfolio/dist/. dist/
+      # SPA fallback for React Router: GitHub Pages serves 404.html for any
+      # unmatched path. Copying index.html → 404.html lets React Router
+      # handle deep links and page refreshes on /about, /work, /journal.
+      - name: Add SPA fallback (404.html)
+        run: cp dist/index.html dist/404.html
 
       - uses: actions/upload-pages-artifact@v3
         with:
