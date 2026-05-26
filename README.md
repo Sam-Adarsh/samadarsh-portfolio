@@ -1,7 +1,7 @@
 # Adarsh S — Portfolio
 
-My personal portfolio site.
+A digital space for my work across AI, systems, data, and markets.
 
-I build AI and data systems across products and financial markets — and this is where I get to put that work into one place.
+Built to document projects, research, experiments, and ideas around intelligent workflows and decision-making systems.
 
-Live: [samadarsh.vercel.app](https://samadarsh.vercel.app/)
+Live: https://samadarsh.vercel.app/
