@@ -56,7 +56,7 @@ export const heroContent = {
   eyebrow: 'AI Engineer · Data Scientist · Markets',
   name: 'Adarsh S',
   tagline:
-    'Building AI systems and data-driven solutions for real-world and financial applications.',
+    'Building AI and data systems for real-world products and financial markets.',
   location: 'Chennai, India',
   available: true,
 };
@@ -69,9 +69,9 @@ export const stats = [
 ] as const;
 
 export const aboutNarrative = [
-  'I work at the intersection of artificial intelligence, data science, and financial markets — designing systems that are practical, structured, and built to ship.',
-  'My background mixes hands-on machine learning work with real exposure to live trading workflows. That combination shapes how I approach problems: analytical, disciplined, and grounded in how things actually behave in production.',
-  'Currently focused on applied GenAI, LLM workflows, and data-driven decision systems — while pursuing my M.Tech in Artificial Intelligence.',
+  'I build and study systems shaped by data, behavior, and decision-making — spanning AI workflows, machine learning, and financial markets.',
+  'Working close to both technology and live market environments has influenced the way I think: structured, analytical, and grounded in real-world constraints.',
+  'Currently exploring applied GenAI, LLM workflows, and data-driven systems.',
 ];
 
 export const experience: ExperienceItem[] = [

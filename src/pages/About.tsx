@@ -12,8 +12,8 @@ export function AboutPage() {
         <div className="container mx-auto max-w-6xl px-6">
           <SectionHeader
             kicker="About"
-            title="At the intersection of AI,"
-            italic="data, and markets."
+            title="Exploring intelligence through"
+            italic="systems, software, and markets."
           />
 
           <div className="grid gap-12 md:grid-cols-12">
