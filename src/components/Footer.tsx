@@ -91,7 +91,7 @@ export function Footer({ compact = false }: FooterProps) {
         </div>
       </div>
 
-      <div className="container mx-auto max-w-6xl px-6 py-20 md:py-24">
+      <div id="contact" className="container mx-auto max-w-6xl px-6 py-20 md:py-24 scroll-mt-24">
         <div className="grid gap-16 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-7">
             <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-accent">

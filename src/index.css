@@ -26,6 +26,13 @@ body,
 
 html {
   font-feature-settings: 'ss01', 'cv11', 'liga', 'kern';
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {

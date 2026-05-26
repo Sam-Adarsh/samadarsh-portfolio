@@ -3,8 +3,6 @@ import gsap from 'gsap';
 import { Link } from 'react-router-dom';
 import { heroContent } from '../data/content';
 
-const EMAIL = 'samadarsh14@gmail.com';
-
 export function Hero() {
   const rootRef = useRef<HTMLElement>(null);
 
@@ -79,7 +77,7 @@ export function Hero() {
                 <span className="transition-transform group-hover:translate-x-0.5">→</span>
               </Link>
               <a
-                href={`mailto:${EMAIL}`}
+                href="#contact"
                 className="group inline-flex items-center gap-2 rounded-full bg-text-primary px-5 py-2.5 text-sm font-medium text-bg transition hover:bg-text-primary/90"
               >
                 Get in touch
@@ -89,7 +87,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-muted">
+      <div className="absolute bottom-8 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 text-muted md:flex">
         <span className="font-mono text-[10px] uppercase tracking-[0.25em]">Scroll</span>
         <span className="h-10 w-px animate-scroll-down bg-gradient-to-b from-transparent via-accent/70 to-transparent" />
       </div>
