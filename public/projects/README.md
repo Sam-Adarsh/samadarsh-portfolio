@@ -1,24 +1,33 @@
 # Project screenshots
 
-Drop your project preview screenshots in this folder. They appear automatically inside the browser-frame preview on the Work and Home pages.
+Drop `.webp` screenshots in this folder. They appear automatically inside the browser-frame preview on the Home and Work pages.
 
-## Expected filenames
+## Currently in use
 
 | File | Project |
 |------|---------|
-| `oor-snacks.png` | Oor Snacks |
-| `repomind.png` | RepoMind |
-| `voicenote-ai.png` | VoiceNote AI |
-| `genai-email.png` | GenAI Email Generator |
-| `ipo-analysis.png` | IPO Performance Analysis |
+| `oor-snacks.webp` | Oor Snacks |
+
+Other projects (RepoMind, VoiceNote AI, GenAI Email Generator, IPO Performance Analysis) intentionally have no cover — they render a branded gradient placeholder with the project name.
+
+## Adding a new screenshot
+
+1. Capture the most visually compelling screen (hero/landing page works best).
+2. Convert to optimized WebP:
+
+   ```bash
+   magick source.png -quality 92 -define webp:method=6 output.webp
+   ```
+
+3. Save as `<slug>.webp` in this folder (slug must match `src/data/content.ts`).
+4. Add `cover: 'projects/<slug>.webp'` to the project entry in `content.ts`.
 
 ## Recommended specs
 
-- **Aspect ratio:** 16:10 (e.g. 1920×1200, 2560×1600)
-- **Format:** PNG or JPG
-- **Max size:** ~800 KB each (compress with `tinypng.com` or similar)
-- **What to capture:** the most visually compelling screen — hero/landing page is usually best
+- **Aspect ratio:** 16:10 (e.g. 1920×1200, 2560×1600) — fits the preview frame natively
+- **Format:** WebP
+- **Target size:** under 250 KB after optimization
 
 ## Fallback behaviour
 
-If a screenshot is missing or fails to load, a branded gradient mockup with the project name shows up automatically. No code changes needed.
+If a `cover` is missing or fails to load, a branded gradient mockup with the project name shows up automatically. No code changes needed — this is what most projects use right now.

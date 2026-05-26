@@ -1,14 +1,14 @@
 # Portfolio — Adarsh S
 
-Personal portfolio site. React + Vite + TypeScript.
+Personal portfolio site. React + Vite + TypeScript, deployed on Vercel.
 
-Lives at: [samadarsh.github.io/samadarsh-portfolio/](https://samadarsh.github.io/samadarsh-portfolio/)
+Live: [samadarsh.vercel.app](https://samadarsh.vercel.app/)
 
 ## Stack
 
 - React 18 + Vite + TypeScript
 - Tailwind CSS + Framer Motion + GSAP
-- React Router (multi-route)
+- React Router (multi-route SPA)
 
 ## Routes
 
@@ -34,21 +34,11 @@ All copy and project data lives in [`src/data/content.ts`](src/data/content.ts) 
 
 ## Project screenshots
 
-Drop `<slug>.webp` files in `public/projects/`. Convert source PNGs with:
-
-```bash
-magick source.png -quality 92 -define webp:method=6 output.webp
-```
-
-Then reference in `content.ts`:
-
-```typescript
-cover: 'projects/<slug>.webp',
-```
+Drop `<slug>.webp` files in `public/projects/` and reference them in `content.ts` via the `cover` field. See [`public/projects/README.md`](public/projects/README.md) for the optimization recipe.
 
 ## Deploy
 
-Pushes to `main` trigger `.github/workflows/deploy.yml`, which builds the site and publishes to GitHub Pages.
+Connected to Vercel — every push to `main` triggers an automatic production deploy, and every PR/branch gets its own preview URL. SPA fallback is handled by [`vercel.json`](vercel.json).
 
 ## Related projects
 
