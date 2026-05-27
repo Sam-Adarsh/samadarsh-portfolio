@@ -41,7 +41,7 @@ export function AboutPage() {
                 <li className="flex items-start gap-3">
                   <span className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-accent" />
                   <span>
-                    Pursuing <strong className="font-medium">M.Tech in AI</strong> at SRM University.
+                    Pursuing <strong className="font-medium">M.Tech in AI</strong>.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
