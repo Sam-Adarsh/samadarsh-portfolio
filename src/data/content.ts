@@ -264,7 +264,7 @@ export const projects: Project[] = [
 
 export const writingMeta: WritingMeta = {
   pageName: 'Haugtun',
-  pageUrl: 'https://www.linkedin.com/company/haugtun/',
+  pageUrl: 'https://www.linkedin.com/showcase/haugtun/',
   description:
     'A research page where I publish structured notes on Indian markets, investing fundamentals, and how capital actually behaves in the real world.',
 };
@@ -279,12 +279,36 @@ export const journalEntries: JournalEntry[] = [
     href: 'https://www.linkedin.com/posts/haugtun_inflation-investing-stockmarket-activity-7464210462306373632-DAsW',
   },
   {
+    title: 'Why market crashes are not random',
+    date: 'May 2026',
+    tag: 'Risk',
+    summary:
+      '2008, COVID, the dot-com bust — every major crash followed the same recipe of overvaluation, leverage, and a catalyst. A field guide to preparing instead of panicking.',
+    href: 'https://www.linkedin.com/feed/update/urn:li:activity:7458800595991257089',
+  },
+  {
+    title: 'Three numbers every investor should read before buying a share',
+    date: 'May 2026',
+    tag: 'Valuation',
+    summary:
+      'EPS, P/E, and P/B. Used in isolation, any one of them can mislead. Used together, they form the spine of every valuation framework worth using.',
+    href: 'https://www.linkedin.com/feed/update/urn:li:activity:7455884994930987008',
+  },
+  {
+    title: 'The four phases every market moves through',
+    date: 'Apr 2026',
+    tag: 'Cycles',
+    summary:
+      'Accumulation, markup, distribution, markdown. Most retail investors buy in distribution and sell in markdown — knowing where you are matters more than timing.',
+    href: 'https://www.linkedin.com/feed/update/urn:li:activity:7450961796301033472',
+  },
+  {
     title: 'What is liquidity and why it matters',
     date: 'Apr 2026',
     tag: 'Markets',
     summary:
       'Liquidity is not the same as volume. A breakdown of what it really measures and why it quietly shapes every execution and exit.',
-    href: 'https://www.linkedin.com/company/haugtun/',
+    href: 'https://www.linkedin.com/feed/update/urn:li:activity:7446819442400964610',
   },
   {
     title: 'The Rule of 72: the simplest way to double your money',
@@ -292,7 +316,7 @@ export const journalEntries: JournalEntry[] = [
     tag: 'Compounding',
     summary:
       'A mental-math shortcut for estimating how long it takes capital to double — and how to use it to compare returns intuitively.',
-    href: 'https://www.linkedin.com/company/haugtun/',
+    href: 'https://www.linkedin.com/feed/update/urn:li:activity:7442307088829095936',
   },
   {
     title: 'Why many beginners lose money before they even understand markets',
@@ -300,7 +324,7 @@ export const journalEntries: JournalEntry[] = [
     tag: 'Fundamentals',
     summary:
       'The structural reasons new investors bleed capital — usually before they can articulate why the market moved against them.',
-    href: 'https://www.linkedin.com/company/haugtun/',
+    href: 'https://www.linkedin.com/feed/update/urn:li:activity:7436333401437138944',
   },
 ];
 
