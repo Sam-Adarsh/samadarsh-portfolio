@@ -214,18 +214,22 @@ export const projects: Project[] = [
   {
     slug: 'voicenote-ai',
     title: 'VoiceNote AI',
-    eyebrow: 'Applied GenAI',
-    year: '2025',
+    eyebrow: 'Speech AI · Tamil ASR',
+    year: '2026',
     role: 'Solo Builder',
     summary:
-      'Multilingual voice-note assistant using Whisper for transcription and Groq LLMs for intent extraction, summarization, and structured note saving.',
+      'A Tamil voice-note pipeline that transcribes speech with Whisper and romanizes it into readable Latin script through a custom in-house mapper — script transliteration, not translation, with no external API.',
     highlights: [
-      'Whisper-powered transcription with multilingual capture.',
-      'LLM-driven intent extraction and summarization with structured JSON output.',
-      'Streamlit interface for quick voice capture and review.',
+      'Whisper-medium ASR transcribes Tamil audio (language=ta) from browser mic capture or file upload.',
+      'Custom grapheme-level Tamil→ASCII romanizer (e.g. நான் சாப்பிட்டேன் → naan saappittaen) — no external transliteration API.',
+      'Long recordings handled with pydub chunking and a bounded in-memory queue, then stitched back together.',
+      'Dockerized and deployed live on Hugging Face Spaces, env-var configurable, with a pytest pipeline suite.',
     ],
-    stack: ['Streamlit', 'Whisper', 'Groq', 'Python'],
-    links: { live: null, github: 'https://github.com/samadarsh/VoiceNote-AI' },
+    stack: ['Whisper', 'Gradio', 'pydub', 'Docker', 'Python'],
+    links: {
+      live: 'https://huggingface.co/spaces/samadarsh/voicenote-ai-transliteration',
+      github: 'https://github.com/samadarsh/VoiceNote-AI',
+    },
     accent: 'from-zinc-700 via-zinc-800 to-zinc-900',
   },
   {
