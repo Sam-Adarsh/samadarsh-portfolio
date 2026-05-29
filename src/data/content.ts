@@ -53,7 +53,7 @@ export type SkillGroup = {
 };
 
 export const heroContent = {
-  eyebrow: 'AI Engineer · Data Scientist · Markets',
+  eyebrow: 'AI · Systems · Capital',
   name: 'Adarsh S',
   tagline:
     'Building AI and data systems for real-world products and financial markets.',
