@@ -275,6 +275,14 @@ export const writingMeta: WritingMeta = {
 
 export const journalEntries: JournalEntry[] = [
   {
+    title: 'Why Indian investors wake up watching Wall Street',
+    date: 'May 2026',
+    tag: 'Global Macro',
+    summary:
+      'Dow falls overnight, Nifty opens red — not coincidence. The channels wiring US markets to Indian equities (FII flows, the dollar, the Fed) and the five signals worth watching before the open.',
+    href: 'https://www.linkedin.com/posts/haugtun_usmarkets-indianstockmarket-fii-activity-7466462230557925376-hSwq',
+  },
+  {
     title: 'How inflation quietly erodes your wealth',
     date: 'May 2026',
     tag: 'Inflation',
@@ -321,14 +329,6 @@ export const journalEntries: JournalEntry[] = [
     summary:
       'A mental-math shortcut for estimating how long it takes capital to double — and how to use it to compare returns intuitively.',
     href: 'https://www.linkedin.com/feed/update/urn:li:activity:7442307088829095936',
-  },
-  {
-    title: 'Why many beginners lose money before they even understand markets',
-    date: 'Mar 2026',
-    tag: 'Fundamentals',
-    summary:
-      'The structural reasons new investors bleed capital — usually before they can articulate why the market moved against them.',
-    href: 'https://www.linkedin.com/feed/update/urn:li:activity:7436333401437138944',
   },
 ];
 
