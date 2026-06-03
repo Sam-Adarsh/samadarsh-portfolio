@@ -192,6 +192,23 @@ export const projects: Project[] = [
     accent: 'from-zinc-700 via-zinc-800 to-zinc-900',
   },
   {
+    slug: 'fin-sight',
+    title: 'FinSight',
+    eyebrow: 'AI · Financial RAG',
+    year: '2026',
+    role: 'Solo Builder',
+    summary:
+      'Local-first RAG system for financial PDFs — annual reports, earnings transcripts, and SEBI filings — with natural-language Q&A grounded in page-level citations.',
+    highlights: [
+      'End-to-end ingestion pipeline: PyMuPDF parsing, LangChain chunking, BGE embeddings, and persistent ChromaDB storage.',
+      'FastAPI backend with Streamlit UI — upload, ingest, and query across companies with Ollama or Gemini LLM providers.',
+      'Citation-aware answers with inline `[filename p.N]` references and post-processing when the model omits source tags.',
+    ],
+    stack: ['FastAPI', 'ChromaDB', 'PyMuPDF', 'LangChain', 'Streamlit', 'Ollama'],
+    links: { live: null, github: 'https://github.com/samadarsh/fin-sight' },
+    accent: 'from-zinc-700 via-zinc-800 to-zinc-900',
+  },
+  {
     slug: 'repomind',
     title: 'RepoMind',
     eyebrow: 'AI · Developer Tools',
@@ -218,12 +235,11 @@ export const projects: Project[] = [
     year: '2026',
     role: 'Solo Builder',
     summary:
-      'A Tamil voice-note pipeline that transcribes speech with Whisper and romanizes it into readable Latin script through a custom in-house mapper — script transliteration, not translation, with no external API.',
+      'Tamil voice-note pipeline that transcribes speech with Whisper and romanizes output into readable Latin script — script transliteration, not translation.',
     highlights: [
-      'Whisper-medium ASR transcribes Tamil audio (language=ta) from browser mic capture or file upload.',
-      'Custom grapheme-level Tamil→ASCII romanizer (e.g. நான் சாப்பிட்டேன் → naan saappittaen) — no external transliteration API.',
-      'Long recordings handled with pydub chunking and a bounded in-memory queue, then stitched back together.',
-      'Dockerized and deployed live on Hugging Face Spaces, env-var configurable, with a pytest pipeline suite.',
+      'Whisper-medium ASR (language=ta) with browser mic capture, file upload, and pydub chunking for long recordings.',
+      'Custom grapheme-level Tamil→ASCII romanizer with no external transliteration API.',
+      'Dockerized Gradio app deployed on Hugging Face Spaces with env-configurable models and pytest coverage.',
     ],
     stack: ['Whisper', 'Gradio', 'pydub', 'Docker', 'Python'],
     links: {
@@ -235,33 +251,18 @@ export const projects: Project[] = [
   {
     slug: 'genai-email',
     title: 'GenAI Email Generator',
-    eyebrow: 'Applied GenAI',
+    eyebrow: 'Applied GenAI · Outreach',
     year: '2024',
     role: 'Solo Builder',
     summary:
-      'Generates context-aware email drafts from user prompts, combining structured prompt engineering with workflow automation.',
+      'Cold-email generator that scrapes job listings, extracts requirements with Llama 3, matches them against a portfolio, and drafts personalized outreach in seconds.',
     highlights: [
-      'Structured prompt engineering for consistent tone and clarity.',
-      'Workflow automation around drafting, revision, and reuse.',
+      'Two-stage LLM chain: structured job extraction from scraped pages, then email generation with matched portfolio links.',
+      'LangChain WebBaseLoader ingests career-page content; Groq-backed Llama 3.3-70b for near-instant inference.',
+      'Streamlit workflow from job URL to ready-to-send draft — cutting manual outreach research and rewriting time.',
     ],
-    stack: ['Streamlit', 'LangChain', 'Llama 3', 'Python'],
+    stack: ['Streamlit', 'LangChain', 'Groq', 'Llama 3', 'Python'],
     links: { live: null, github: 'https://github.com/samadarsh/GenAI-Email-Generator' },
-    accent: 'from-zinc-700 via-zinc-800 to-zinc-900',
-  },
-  {
-    slug: 'ipo-analysis',
-    title: 'IPO Performance Analysis',
-    eyebrow: 'Market Analysis',
-    year: '2024',
-    role: 'Solo Researcher',
-    summary:
-      'Data analysis on Indian IPO performance using profitability measures and visual exploration to identify post-listing patterns.',
-    highlights: [
-      'Profitability and listing-pattern analysis on Indian IPO data.',
-      'Visualizations surfacing post-listing behavioural trends.',
-    ],
-    stack: ['Pandas', 'Matplotlib', 'Finance Data', 'Python'],
-    links: { live: null, github: 'https://github.com/samadarsh/IPO-Performance-Analysis' },
     accent: 'from-zinc-700 via-zinc-800 to-zinc-900',
   },
 ];
