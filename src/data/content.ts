@@ -128,12 +128,6 @@ export const experience: ExperienceItem[] = [
 
 export const education: EducationItem[] = [
   {
-    degree: 'M.Tech in Artificial Intelligence',
-    school: 'SRM University',
-    period: '2026 — 2028',
-    note: 'Specializing in deep learning, generative AI, and applied AI systems.',
-  },
-  {
     degree: 'B.Tech in Artificial Intelligence & Data Science',
     school: 'Easwari Engineering College',
     period: '2020 — 2024',
