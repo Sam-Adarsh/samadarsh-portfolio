@@ -168,6 +168,26 @@ export const skillGroups: SkillGroup[] = [
 
 export const projects: Project[] = [
   {
+    slug: 'bite-wise',
+    title: 'BiteWise',
+    eyebrow: 'AI · Food Intelligence',
+    year: '2026',
+    role: 'Solo Builder',
+    summary:
+      'Food intelligence platform with two products — NutriOrder AI for nutrition-aware Swiggy ordering and SmartPantry AI for household pantry, recipes, and grocery planning — powered by Swiggy MCP with safety-gated checkout.',
+    highlights: [
+      'NutriOrder AI ranks meals across nutrition fit, cost, delivery time, taste, and availability with explainable per-factor breakdowns.',
+      'SmartPantry AI tracks household stock, suggests cook-today recipes, auto-builds priority grocery lists, and previews Instamart carts.',
+      'Next.js + FastAPI platform with Swiggy MCP, OAuth 2.1 PKCE, encrypted tokens, and explicit confirmation before any order mutation.',
+    ],
+    stack: ['Next.js', 'FastAPI', 'TypeScript', 'Swiggy MCP', 'SQLAlchemy', 'Tailwind'],
+    links: {
+      live: 'https://bite-wise-theta.vercel.app',
+      github: 'https://github.com/samadarsh/BiteWise',
+    },
+    accent: 'from-zinc-700 via-zinc-800 to-zinc-900',
+  },
+  {
     slug: 'oor-snacks',
     title: 'Oor Snacks',
     eyebrow: 'Product · D2C Storefront',
