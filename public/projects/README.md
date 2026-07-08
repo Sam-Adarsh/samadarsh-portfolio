@@ -6,6 +6,7 @@ Drop `.webp` screenshots in this folder. They appear automatically inside the br
 
 | File | Project |
 |------|---------|
+| `bite-wise.webp` | BiteWise |
 | `oor-snacks.webp` | Oor Snacks |
 
 Other projects (RepoMind, VoiceNote AI, GenAI Email Generator, IPO Performance Analysis) intentionally have no cover — they render a branded gradient placeholder with the project name.
