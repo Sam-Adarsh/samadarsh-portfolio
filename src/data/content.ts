@@ -174,11 +174,11 @@ export const projects: Project[] = [
     year: '2026',
     role: 'Solo Builder',
     summary:
-      'Approved Swiggy Builders Club project — a food intelligence platform on Swiggy Food and Instamart MCP, with NutriOrder AI for nutrition-aware ordering and SmartPantry AI for household pantry and grocery planning.',
+      'Approved Swiggy Builders Club project — a two-product food intelligence platform where NutriOrder AI powers nutrition-aware Swiggy ordering and SmartPantry AI handles household pantry, recipes, and grocery planning via Swiggy Food and Instamart MCP.',
     highlights: [
-      'Swiggy MCP execution layer: Food MCP for meal search, cart, coupons, and tracking; Instamart MCP for grocery search and cart preview.',
-      'NutriOrder AI ranks meals across nutrition fit, cost, delivery time, taste, and availability with explainable per-factor breakdowns.',
-      'Next.js + FastAPI platform with OAuth 2.1 PKCE, encrypted tokens, environment locks, and explicit confirmation before any order mutation.',
+      'NutriOrder AI: health-profile-driven meal ranking across nutrition, cost, delivery time, taste, and availability — with explainable scores, cart review, and Food MCP order tracking.',
+      'SmartPantry AI: shared household pantry, low-stock alerts, cook-today recipe matching, priority grocery lists, and Instamart cart preview through Instamart MCP.',
+      'Swiggy Builders Club MCP stack with OAuth 2.1 PKCE, encrypted tokens, environment locks, and explicit confirmation before any Food or Instamart mutation.',
     ],
     stack: ['Next.js', 'FastAPI', 'Swiggy MCP', 'TypeScript', 'SQLAlchemy', 'Tailwind'],
     links: {
