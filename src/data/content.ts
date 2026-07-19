@@ -76,11 +76,23 @@ export const aboutNarrative = [
 
 export const experience: ExperienceItem[] = [
   {
+    role: 'AI Engineer',
+    company: 'Neeroma Technologies',
+    period: 'Jun 2026 — Present',
+    summary:
+      'Led the architecture and development of the AI Classroom module for QLearn, building an intelligent learning environment that combines AI tutoring, adaptive learning, contextual content delivery, and interactive educational experiences.',
+    points: [
+      'Developed AI-powered learning workflows and educational features by integrating LLM capabilities, intelligent content generation, adaptive practice systems, and real-time user interactions across the platform.',
+      'Built scalable full-stack applications using React, TypeScript, Node.js, Express.js, MongoDB, Tailwind CSS, and AI technologies, focusing on modular architecture, high performance, and enterprise-grade security.',
+      'Provided technical leadership throughout the development lifecycle by coordinating implementation efforts, reviewing solutions, resolving complex technical issues, and ensuring high-quality engineering standards across the QLearn modules.',
+    ],
+  },
+  {
     role: 'AI/ML Intern',
     company: 'BAE AI',
-    period: 'May 2026 — Present',
+    period: 'May 2026 — Jun 2026',
     summary:
-      'Building the BAExt Intent Engine — a deterministic pipeline that turns shopping queries into structured intent, ranked product blocks, and validated JSON across a 1,200-SKU catalog.',
+      'Built the BAExt Intent Engine — a deterministic pipeline that turns shopping queries into structured intent, ranked product blocks, and validated JSON across a 1,200-SKU catalog.',
     points: [
       'Implemented the full MERN stack (Node/Express, React, MongoDB, TypeScript) across query parsing, 11-signal ranking, answer generation, and end-to-end orchestration.',
       'Delivered production hardening with query caching, Docker Compose, and 250+ automated tests.',
