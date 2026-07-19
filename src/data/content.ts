@@ -89,7 +89,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     role: 'AI/ML Intern',
-    company: 'BAE AI',
+    company: 'Bae AI',
     period: 'May 2026 — Jun 2026',
     summary:
       'Built the BAExt Intent Engine — a deterministic pipeline that turns shopping queries into structured intent, ranked product blocks, and validated JSON across a 1,200-SKU catalog.',
